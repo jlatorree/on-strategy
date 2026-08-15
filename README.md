@@ -2,7 +2,7 @@
 
 Skill de [Claude Code](https://claude.com/claude-code) y Claude Cowork que actúa como socio de pensamiento estratégico. Co-construye con el usuario, en español y una decisión a la vez, la estrategia de una empresa o unidad de negocio, combinando los frameworks de Roger Martin (*Playing to Win*, con A.G. Lafley) y de Michael Porter (según *Understanding Michael Porter*, de Joan Magretta).
 
-## El skill propone, el usuario decide
+## Cómo procede el skill
 
 Esa es la regla que gobierna todo lo demás. En cada elección: explica en lenguaje llano qué se decide y por qué importa, pregunta lo que solo el usuario sabe, propone opciones con su razonamiento y una recomendación, espera la decisión, y recién entonces la registra y avanza. Nunca asume una elección estratégica en nombre del usuario.
 
@@ -40,16 +40,26 @@ on-strategy/
 
 ## Cómo estructura el entregable
 
-En vez de un documento monolítico que crece sin control, el skill construye la estrategia en secciones separadas dentro de la carpeta de trabajo del usuario:
+En vez de un documento monolítico que crece sin control, el skill construye la estrategia en secciones separadas dentro de la carpeta de trabajo del usuario, una por cada módulo que hay que decidir, en este orden:
+
+- **Problema a resolver**: la brecha entre el resultado que se quiere y el que se tiene, dicha desde el cliente y no desde el estado financiero.
+- **Winning Aspiration**: qué significa ganar, con quién y contra quién, traducido a medidas concretas.
+- **Where to Play y How to Win**: dónde se compite (y con el mismo peso, dónde no) y la teoría de por qué se gana en ese campo. Van en un solo archivo porque son un par inseparable: separarlos es donde más riesgo hay de que queden incoherentes entre sí.
+- **Must-Have Capabilities**: las pocas capacidades que sostienen el How to Win, con el sistema de actividades que las produce y cómo se refuerzan entre sí.
+- **Enabling Management Systems**: qué sistemas construyen y sostienen esas capacidades, y qué se mide para saber si están funcionando.
+- **Posibilidades descartadas**: qué otras opciones se consideraron en el camino, qué condición no se sostuvo y qué prueba lo demostró. Evita que alguien proponga de nuevo, dentro de un año, algo ya descartado.
+- **Supuestos vivos**: condiciones que la estrategia necesita y que todavía no están verificadas, cada una con su prueba, su responsable y su fecha.
+- **Señales de cambio**: las tres condiciones de Porter que, si ocurren, invalidan la estrategia elegida.
+- **Strategic Logic Flow** *(anexo)*: el análisis de los siete elementos, con las Cinco Fuerzas dentro del atractivo estructural, que responde de dónde salió cada elección anterior.
+- **Posibilidades y What Would Have To Be True** *(anexo)*: todas las posibilidades generadas, incluidas las que no llegaron a ningún lado, con el WWHTBT completo de cada una. El plano entero de la estrategia, para cuando alguien la cuestione más adelante.
+
+Esos diez módulos viven junto a un índice y a dos registros transversales:
 
 ```
 [carpeta de trabajo]/
 ├── index.md                  mapa de estado y dependencias entre secciones
 ├── inbox/                    para que el usuario deje contexto o feedback, se procesa y se vacía
-├── secciones/                una sección por decisión, cada una con su frontmatter de estado
-│                             (problema, winning-aspiration, where-to-play-how-to-win,
-│                             capabilities, management-systems, posibilidades-descartadas,
-│                             supuestos-vivos, señales-de-cambio, y dos anexos: logic-flow y wwhtbt)
+├── secciones/                los diez módulos de arriba, cada uno con su frontmatter de estado
 ├── evidencia.md               cada dato marcado como verificado o como supuesto
 ├── bitacora-de-decisiones.md  registro cronológico, append-only
 └── estrategia.md              el memo final, compilado solo cuando todo está decidido y es coherente
