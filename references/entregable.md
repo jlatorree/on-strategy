@@ -45,7 +45,7 @@ La carpeta se crea recién cuando el usuario aprueba la ruta en el Paso 0. Antes
 
 ---
 
-## 2. Frontmatter: la fuente de verdad de cada sección
+## 2. Frontmatter: la fuente de verdad del estado
 
 Cada archivo de `secciones/` abre con este frontmatter. **El estado vive acá, no en el índice.** El índice es una vista compilada de estos bloques, así que si alguna vez difieren, mandan los archivos.
 
@@ -56,14 +56,14 @@ titulo: Where to Play y How to Win
 destino: memo          # memo | anexo
 estado: borrador       # vacio | borrador | decidido | desactualizado
 version: 3
-depende_de: [problema-a-resolver, winning-aspiration, strategic-logic-flow, posibilidades-wwhtbt]
-afecta_a: [capabilities, management-systems, posibilidades-descartadas, supuestos-vivos, senales-de-cambio]
 decidido_el:           # fecha, solo cuando estado es decidido
 desactualizado_por:    # qué cambio la dejó así, solo cuando estado es desactualizado
 ---
 ```
 
-`seccion`, `depende_de` y `afecta_a` usan el nombre del archivo sin el prefijo ni la extensión. Un solo vocabulario para todo el sistema evita que el grafo se rompa por una abreviatura.
+`seccion` usa el nombre del archivo sin el prefijo ni la extensión. Es el nombre con el que la sección aparece en el grafo de dependencias y en el índice: un solo vocabulario para todo el sistema evita que el grafo se rompa por una abreviatura.
+
+**Las aristas no van en el frontmatter.** El grafo de la sección 3 es la fuente de verdad de qué depende de qué, en las dos direcciones. Guardarlas también acá serían dos copias que nada obliga a sincronizar, y en cuanto divergieran la propagación del estado `desactualizado` empezaría a fallar en silencio, que es el modo de falla más caro de este diseño.
 
 **`titulo` lleva el nombre completo del marco**, y es el que se usa en el memo y al hablar con el usuario. El nombre del archivo se acorta cuando no hay ambigüedad: `03-capabilities` en el archivo, **Must-Have Capabilities** en el título; `04-management-systems` en el archivo, **Enabling Management Systems** en el título. Los calificativos importan (son las capacidades que hay que tener, y los sistemas que habilitan), y por eso viven en el título y no se pierden.
 
@@ -82,7 +82,9 @@ desactualizado_por:    # qué cambio la dejó así, solo cuando estado es desact
 
 ## 3. El grafo de dependencias
 
-Es el que hace posible detectar contradicciones. Cuando se escribe una sección, se releen las que están arriba de ella y las que están abajo y ya están `decidido`.
+**Este grafo es la fuente de verdad de las aristas**, y ningún frontmatter las repite. De acá salen las tres cosas que las usan: de qué depende una sección (paso 1 del ciclo de escritura), qué secciones marcar `desactualizado` al cambiarla (paso 5), y las dos columnas de dependencias del índice.
+
+Es también lo que hace posible detectar contradicciones. Cuando se escribe una sección, se releen las que están arriba de ella y las que están abajo y ya están `decidido`.
 
 ```
 problema-a-resolver
@@ -113,7 +115,7 @@ Dos flechas de retorno que vienen de las fuentes y hay que respetar:
 
 ## 4. `index.md`
 
-Se regenera leyendo el frontmatter de cada sección. Formato:
+Se regenera leyendo el frontmatter de cada sección, que aporta estado y versión, y el grafo de la sección 3, que aporta las dos columnas de dependencias. Formato:
 
 ```markdown
 # Índice de la estrategia
@@ -125,7 +127,7 @@ Se regenera leyendo el frontmatter de cada sección. Formato:
 
 | Sección | Archivo | Estado | v | Depende de | Afecta a |
 |---|---|---|---|---|---|
-| Problema a resolver | `secciones/00-problema-a-resolver.md` | decidido | 2 | | winning-aspiration, strategic-logic-flow |
+| Problema a resolver | `secciones/00-problema-a-resolver.md` | decidido | 2 | (raíz) | winning-aspiration, strategic-logic-flow |
 | Winning Aspiration | `secciones/01-winning-aspiration.md` | borrador | 1 | problema-a-resolver | where-to-play-how-to-win |
 | ... | | | | | |
 
@@ -150,19 +152,11 @@ La sección **"Qué falta para compilar el memo"** es la que hace que el proceso
 
 ---
 
-## 5. Cuándo y cómo se actualiza el índice
+## 5. Por qué el índice se actualiza en el mismo movimiento
 
-**En cada cambio, sin excepción.** Actualizar el índice es parte del movimiento "registra" del ciclo de decisión, no un paso posterior que se pueda saltar. Si el índice queda desactualizado, la detección de contradicciones deja de funcionar y la modularidad se vuelve un riesgo en vez de una ventaja.
+La secuencia de siete pasos vive en `SKILL.md`, sección "El ciclo de escritura". Acá va solo por qué no se puede posponer.
 
-Secuencia completa cada vez que se escribe una sección:
-
-1. **Antes de escribir**, lee las secciones de las que esta depende, más las que dependen de esta y ya están `decidido`.
-2. **Si hay contradicción, alerta y no escribas.** Ver sección 6.
-3. Escribe el contenido de la sección.
-4. Actualiza su frontmatter: `estado`, `version`, y `decidido_el` si el usuario la cerró.
-5. Marca como `desactualizado` cada sección de `afecta_a` que estuviera `decidido`, con su `desactualizado_por`.
-6. Regenera `index.md`: tabla, alertas, inbox y qué falta para el memo.
-7. Agrega la línea correspondiente a `bitacora-de-decisiones.md`.
+Si el índice queda viejo, la detección de contradicciones deja de funcionar: el paso 1 del ciclo lee dependencias contra un estado que ya no es cierto, y una sección se escribe encima de otra sin que nadie lo note hasta que falla la ejecución. Ahí la modularidad pasa de ventaja a riesgo, porque un documento monolítico al menos obliga a ver lo que se contradice. Actualizar el índice es parte de escribir, no un paso posterior.
 
 ---
 
@@ -176,9 +170,9 @@ Una contradicción es cualquier cosa que una sección afirme y que otra sección
 - Una medida en `04-management-systems` premia un comportamiento que contradice una renuncia del Where to Play.
 - Un supuesto vivo, si resulta falso, invalida una sección ya decidida y nadie lo notó.
 
-**Qué hacer al detectar una:** dilo antes de escribir, nombra las dos secciones y las dos afirmaciones en conflicto, explica cuál es la consecuencia de dejarlas conviviendo, y propón las salidas posibles. La decisión de cuál sostener es del usuario. Recién con esa decisión se escribe, y la alerta se registra resuelta en el índice y en la bitácora.
+Qué hacer al detectar una es el paso 2 del ciclo de escritura, en `SKILL.md`. Cuando la alerta se resuelve, queda registrada como resuelta en el índice y en la bitácora.
 
-Una alerta abierta en `index.md` bloquea la compilación del memo. Un memo con dos elecciones incompatibles adentro es peor que uno incompleto, porque nadie se entera hasta que la ejecución falla.
+Por qué una alerta abierta bloquea la compilación: un memo con dos elecciones incompatibles adentro es peor que uno incompleto, porque nadie se entera hasta que la ejecución falla.
 
 ---
 
@@ -265,12 +259,7 @@ Este es el plano de la estrategia y se conserva: cuando alguien cuestione una el
 
 El último paso, y es una **compilación con compuerta**, no una redacción.
 
-**La compuerta.** No se compila mientras se cumpla cualquiera de estas:
-- Alguna sección con `destino: memo` está `vacio` o `desactualizado`.
-- Hay alertas abiertas en el índice.
-- Las cinco pruebas de Porter no se corrieron o alguna falló sin resolverse.
-
-Si algo bloquea, dilo y nombra qué falta. La sección "Qué falta para compilar el memo" del índice ya lo tiene.
+**La compuerta.** La corre `SKILL.md`, sección "Cierre y verificación", y su resultado se le muestra al usuario antes de compilar. Si algo bloquea, la sección "Qué falta para compilar el memo" del índice ya lo tiene nombrado.
 
 **La compilación.** Lee las ocho secciones con `destino: memo` y destila. Destilar es podar: de cada sección entra solo lo distintivo, lo que hace a esta organización distinta de sus rivales. **Si la frase la podría firmar igual cualquier competidor, no entra.** Hacer cosas cuyo opuesto es obviamente estúpido no es estrategia.
 

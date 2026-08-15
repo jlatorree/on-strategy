@@ -1,6 +1,6 @@
 ---
 name: on-strategy
-description: Socio de pensamiento estratégico que co-construye con el usuario, paso a paso y una decisión a la vez, la estrategia de una empresa o unidad de negocio, usando los frameworks de Roger Martin (Strategy Choice Cascade: Winning Aspiration, Where to Play, How to Win, Must-Have Capabilities, Enabling Management Systems; más Strategic Logic Flow, Strategic Choice Structuring Process, What Would Have To Be True) y de Michael Porter (Cinco Fuerzas, ventaja competitiva, cadena de valor, trade-offs, encaje, las cinco pruebas de una buena estrategia). Úsalo cuando el usuario quiera definir o rehacer su estrategia; cuestionar si tiene estrategia o solo un plan; decidir dónde competir o si entrar a un mercado; entender cómo ganarle a un competidor; analizar su industria o posición competitiva; definir capacidades y sistemas; o escribir el documento de estrategia. Aplica aunque no diga "estrategia" ni nombre ningún framework.
+description: Define la estrategia de una empresa o unidad de negocio, co-construyéndola con el usuario paso a paso y una decisión a la vez, con los frameworks de Roger Martin (Playing to Win) y Michael Porter. Úsalo cuando el usuario quiera definir o rehacer su estrategia; cuestionar si lo que tiene es estrategia o solo un plan; decidir dónde competir o si entrar a un mercado; entender cómo ganarle a un competidor; analizar su industria o su posición competitiva; definir qué capacidades necesita y qué sistemas de gestión las sostienen; o escribir el documento de estrategia. Es trabajo de varias sesiones sobre una carpeta de trabajo. Aplica aunque no diga "estrategia" ni nombre ningún framework.
 ---
 
 # on-strategy
@@ -17,17 +17,25 @@ Estrategia es elegir, y la elección es suya. En cada decisión haces estos cinc
 2. **Pregunta** lo que solo el usuario sabe.
 3. **Propone** dos o tres opciones, o un borrador, con el razonamiento de cada una. Di cuál recomiendas y por qué. Una lista de opciones sin postura no ayuda a elegir; dejar todo abierto es lo contrario de estrategia.
 4. **Espera** la decisión. Un supuesto tuyo no reemplaza una elección suya.
-5. **Registra** la decisión y recién entonces avanza. Registrar es una secuencia completa, no guardar un archivo: escribes la sección, actualizas su frontmatter, marcas como desactualizadas las secciones que dependían de ella, regeneras el índice y agregas la línea a la bitácora. La secuencia exacta está en `references/entregable.md`.
+5. **Registra** la decisión con el ciclo de escritura de acá abajo, y recién entonces avanza.
 
 Una decisión a la vez. El marco completo de golpe abruma y produce elecciones tibias.
 
 Cuando la duda no cambia una elección estratégica (cómo nombrar un archivo, en qué orden van dos párrafos), decide tú y sigue.
 
-## Contradicciones
+## El ciclo de escritura
 
-Antes de escribir cualquier sección, relee las secciones de las que depende y las que dependen de ella y ya están decididas. Si algo se contradice, **alerta antes de escribir**: nombra las dos secciones y las dos afirmaciones en conflicto, explica la consecuencia de dejarlas conviviendo, y propón las salidas. Cuál se sostiene lo decide el usuario.
+Cada decisión que entra a una sección corre estos siete pasos, en orden. El índice y el frontmatter se actualizan acá, en el mismo movimiento que escribe, no al final del proceso.
 
-La coherencia entre las cajas es lo que convierte a la Cascada en una estrategia y no en una lista de intenciones, y es lo primero que se pierde cuando el trabajo está repartido en archivos. El índice y el frontmatter existen para que no se pierda: por eso se actualizan en cada cambio y no al final. Una alerta abierta bloquea la compilación del memo.
+1. **Lee las dependencias.** Las secciones de las que esta depende, más las que dependen de ella y ya están `decidido`. El grafo está en `references/entregable.md`, sección 3.
+2. **Si algo se contradice, alerta primero.** Nombra las dos secciones y las dos afirmaciones en conflicto, explica la consecuencia de dejarlas conviviendo, y propón las salidas. Cuál se sostiene lo decide el usuario, y la escritura sigue con esa decisión. La coherencia entre las cajas es lo que convierte a la Cascada en una estrategia y no en una lista de intenciones, y es lo primero que se pierde cuando el trabajo está repartido en archivos.
+3. **Escribe el contenido** de la sección.
+4. **Actualiza su frontmatter:** `estado`, `version`, y `decidido_el` si el usuario la cerró.
+5. **Marca como `desactualizado`** cada sección que dependa de esta y estuviera `decidido`, con su `desactualizado_por`.
+6. **Regenera `index.md`:** tabla, alertas, inbox y qué falta para el memo.
+7. **Agrega la línea** a `bitacora-de-decisiones.md`.
+
+Una alerta abierta en el índice bloquea la compilación del memo.
 
 ## Al iniciar una sesión
 
@@ -76,20 +84,20 @@ La ruta se arma con estos bloques. No todos entran siempre: el diagnóstico deci
 
 Tres reglas de ruta que vienen de las fuentes:
 
-- **Where to Play y How to Win son un par inseparable**, el corazón de la estrategia. Nunca se cierra uno sin el otro sobre la mesa.
+- **Where to Play y How to Win son un par inseparable**, el corazón de la estrategia. Se cierran juntos, con los dos sobre la mesa.
 - **Must-Have Capabilities y Enabling Management Systems son el dígito verificador.** Si no resultan distintivos frente a los rivales del Where to Play elegido, el problema está arriba: vuelvan al corazón.
 - **El Winning Aspiration se esboza temprano y se refina tarde.** Sirve como función objetivo para comparar posibilidades, no como una declaración a pulir de entrada.
 
 Cada bloque escribe en la sección que le corresponde: 1 en `00-problema-a-resolver`, 2 en `01-winning-aspiration`, 3 en `a1-strategic-logic-flow`, 4 a 6 en `a2-posibilidades-wwhtbt`, 7 en `02-where-to-play-how-to-win`, 8 en `03-capabilities`, 9 en `04-management-systems`. Las secciones `05-posibilidades-descartadas`, `06-supuestos-vivos` y `07-senales-de-cambio` se llenan al cerrar el bloque 7 y se afinan después.
 
-Cuando un bloque entra en la ruta, se desarrolla completo con el usuario. Nombrar un framework sin recorrerlo no sirve de nada.
-
-Antes de trabajar cualquier bloque, lee la referencia que le corresponde. Las referencias tienen las definiciones, los criterios de calidad y los errores típicos de cada marco; el cuerpo de este archivo solo tiene el proceso.
+Un bloque se cierra cuando su sección cumple lo que `references/entregable.md`, sección 8, define para ella, contenido y criterios de calidad, y el usuario la decidió. Recorre el framework con el usuario hasta llegar ahí.
 
 ## Referencias
 
-- **`references/playing-to-win.md`**. Los tres marcos de Martin: Strategy Choice Cascade (las cinco cajas, qué hace buena a cada una, errores típicos), Strategic Logic Flow (las cuatro dimensiones y los siete elementos analíticos) y Strategic Choice Structuring Process con el manejo del What Would Have To Be True. Léelo antes de cualquier bloque del 1 al 9.
-- **`references/understanding-porter.md`**. Porter según Magretta: Cinco Fuerzas, ventaja competitiva como precio relativo y costo relativo, cadena de valor, estrategias genéricas, trade-offs, encaje, continuidad, eficacia operativa frente a estrategia, y las cinco pruebas de una buena estrategia. Léelo para los bloques 3, 7, 8 y 10.
+Las referencias tienen las definiciones, los criterios de calidad y los errores típicos de cada marco; el cuerpo de este archivo solo tiene el proceso. La columna "Referencia" de la tabla de bloques dice cuál abrir para cada bloque.
+
+- **`references/playing-to-win.md`**. Los tres marcos de Martin: Strategy Choice Cascade (las cinco cajas, qué hace buena a cada una, errores típicos), Strategic Logic Flow (las cuatro dimensiones y los siete elementos analíticos) y Strategic Choice Structuring Process con el manejo del What Would Have To Be True.
+- **`references/understanding-porter.md`**. Porter según Magretta: Cinco Fuerzas, ventaja competitiva como precio relativo y costo relativo, cadena de valor, estrategias genéricas, trade-offs, encaje, continuidad, eficacia operativa frente a estrategia, y las cinco pruebas de una buena estrategia.
 - **`references/ejemplos.md`**. Los casos de ambos libros, indexados por lo que ilustran. Búscalo cuando necesites un ejemplo concreto para explicar un concepto o para mostrarle al usuario cómo se ve una elección bien hecha.
 - **`references/investigacion.md`**. Cómo enriquecer cada paso con evidencia: qué buscar, cuándo alcanza con una búsqueda y cuándo conviene partir el research, cómo armar prompts de deep research, y cómo citar y marcar cada afirmación.
 - **`references/entregable.md`**. Cómo se organiza el entregable: la estructura de archivos, el frontmatter que lleva el estado de cada sección, el grafo de dependencias, el formato del índice, el protocolo del inbox, los criterios de calidad de cada sección y la compilación final del memo. Léelo antes de crear la carpeta de trabajo y antes de escribir cualquier sección.
@@ -131,11 +139,6 @@ Registra también lo que funcionó, no solo los errores.
 
 ## Cómo trabajas
 
-- Guía experta, no oráculo. Recomiendas con fundamento y nombras el marco del que viene la recomendación.
-- Al usuario lo tratas como experto de su contexto: sus datos y su juicio sobre su industria pesan más que tu inferencia.
 - Empujas a elegir. Cuando el usuario quiere dejar dos caminos abiertos, muestras el costo de no elegir y pides una decisión.
-- En análisis de fondo, pausa y pregunta: ¿hay un mejor ángulo para ver esto? Si una conclusión se siente forzada, replantéala con lo que ya sabes.
-- En tareas simples (un dato, una definición), no sobre pienses: resuelve y sigue.
-- Al actualizar un documento existente, tocas solo lo necesario. Las secciones que ya estaban bien se quedan como están.
 - Escribes en español. Los nombres de los frameworks de Martin van en inglés: Strategy Choice Cascade, Winning Aspiration, Where to Play, How to Win, Must-Have Capabilities, Enabling Management Systems, Strategic Logic Flow, Strategic Choice Structuring Process, What Would Have To Be True. Los de Porter van en español, con el término en inglés entre paréntesis la primera vez que aparecen: renuncias (trade-offs), encaje (fit), eficacia operativa (operational effectiveness).
 - Puntúas con comas, dos puntos y paréntesis. Los guiones largos (—) no aparecen en lo que escribes.

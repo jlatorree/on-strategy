@@ -65,7 +65,7 @@ Esos diez módulos viven junto a un índice y a dos registros transversales:
 └── estrategia.md              el memo final, compilado solo cuando todo está decidido y es coherente
 ```
 
-Cada sección lleva un frontmatter (`estado`, `depende_de`, `afecta_a`) que arma un grafo de dependencias. Antes de escribir cualquier sección, el skill relee de qué depende y qué depende de ella para detectar contradicciones y alertarlas antes de escribir. El memo (`estrategia.md`) se compila al final, respetando la regla de Roger Martin de que una estrategia que no cabe en cinco páginas probablemente no está bien pensada.
+Cada sección lleva un frontmatter con su estado (`vacio`, `borrador`, `decidido`, `desactualizado`), y un grafo de dependencias declarado en un solo lugar dice qué alimenta a qué. Antes de escribir cualquier sección, el skill relee de qué depende y qué depende de ella para detectar contradicciones y alertarlas antes de escribir. El memo (`estrategia.md`) se compila al final, respetando la regla de Roger Martin de que una estrategia que no cabe en cinco páginas probablemente no está bien pensada.
 
 ## Instalación
 
