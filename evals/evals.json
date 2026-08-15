@@ -1,0 +1,48 @@
+{
+  "skill_name": "on-strategy",
+  "evals": [
+    {
+      "id": 0,
+      "name": "arranque-desde-cero",
+      "prompt": "tengo una empresa de logística de última milla en Lima, unos 120 empleados, facturamos como 8 millones de soles al año. venimos creciendo pero el margen se nos viene achicando feo, competimos contra los grandes de delivery y contra dos o tres locales que están tirando el precio abajo. necesito armar la estrategia para el 2027, ayúdame con eso",
+      "expected_output": "Arranca en el Paso 0: entrevista de diagnóstico (entidad y nivel, situación, qué ya está decidido, quién decide, horizonte, datos disponibles, preferencia de investigación) y propone una ruta para acordar. No inventa una estrategia completa, ni datos de mercado, ni una cascada llena. Explica en lenguaje llano qué se va a decidir. Una decisión a la vez.",
+      "files": [],
+      "assertions": [
+        "Hace el diagnóstico del Paso 0 antes de proponer contenido estratégico: pregunta por entidad y nivel, situación, qué ya está decidido, quién decide, horizonte y datos disponibles",
+        "Pregunta al usuario cómo prefiere que se haga la investigación (búsqueda directa, prompts de deep research, o datos que él aporta)",
+        "No entrega una Strategy Choice Cascade completa ni un Where to Play y How to Win definidos para esta empresa",
+        "No afirma tamaños de mercado, participaciones, márgenes de industria ni nombres de competidores que el usuario no dio",
+        "Propone una ruta de trabajo explícita y la somete a aprobación del usuario antes de avanzar",
+        "Cierra pidiendo una respuesta o decisión concreta al usuario en lugar de seguir solo",
+        "Explica en lenguaje llano qué se va a decidir antes de usar los nombres de los frameworks",
+        "Mantiene en inglés los nombres de los frameworks de Roger Martin que menciona",
+        "No usa guiones largos (—) en el texto"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "parcialmente-resuelto",
+      "prompt": "ya tenemos definido el propósito y sabemos perfectamente a qué segmento le vamos: clínicas privadas medianas de provincia, entre 20 y 80 camas. eso está clarísimo y no lo vamos a mover. lo que no tengo claro es cómo les ganamos a los dos jugadores grandes que ya están ahí y que además tienen mejor precio que nosotros. somos una empresa de software de gestión hospitalaria, 40 personas, 3 años en el mercado",
+      "expected_output": "Reconoce explícitamente que Winning Aspiration y Where to Play ya están resueltos y los toma como punto de partida sin rehacerlos. Propone entrar en el How to Win, señalando que Where to Play y How to Win son un par y que puede haber que ajustar el segundo. Hace las preguntas necesarias antes de proponer. No inventa competidores, precios ni datos de mercado.",
+      "files": [],
+      "assertions": [
+        "Reconoce explícitamente que el Winning Aspiration y el Where to Play ya están decididos y dice que los toma como punto de partida",
+        "No propone rehacer la segmentación ni re-evaluar el segmento elegido como tarea principal",
+        "Propone que el trabajo entre por el How to Win",
+        "Señala que Where to Play y How to Win son un par inseparable, o que cerrar el How to Win puede obligar a afinar el Where to Play",
+        "Hace las preguntas que necesita antes de proponer un How to Win concreto",
+        "No inventa nombres de competidores, precios, participaciones ni datos de mercado que el usuario no dio",
+        "Ofrece opciones o un borrador con su razonamiento y una recomendación, en lugar de solo preguntar o solo afirmar",
+        "Cierra pidiendo una decisión concreta al usuario",
+        "No usa guiones largos (—) en el texto"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "plan-disfrazado-de-estrategia",
+      "prompt": "te paso lo que armamos con el equipo para el próximo año y quiero que me digas si está bien. 1) crecer 25% en ventas 2) ser el número 1 del mercado en satisfacción del cliente 3) lanzar 3 productos nuevos 4) abrir 2 oficinas regionales 5) implementar un CRM y capacitar a toda la fuerza de ventas. somos una distribuidora de insumos médicos, le vendemos a clínicas y hospitales",
+      "expected_output": "Nombra que esto es un plan y no una estrategia, y explica la distinción con fundamento (Martin: estrategia no es un plan ni una lista de iniciativas; Porter: ser el número 1 en satisfacción es competir por ser el mejor; el CRM y la capacitación son eficacia operativa). No aprueba la lista ni la reordena. Hace el diagnóstico del Paso 0 y propone una ruta.",
+      "files": []
+    }
+  ]
+}
