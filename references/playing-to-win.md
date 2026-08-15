@@ -174,6 +174,8 @@ Formúlalo **desde el cliente**, no desde el estado financiero. No "nuestros má
 
 Empieza por el problema más grande, no por conceptos abstractos de estrategia.
 
+**Por qué no hay un paso "How Might We?" entre este y el siguiente.** La cuarta iteración del SCSP (2020) lo tuvo, tomado del design thinking, como puente entre nombrar el problema y generar posibilidades. Martin lo sacó en la quinta iteración (la vigente, 2025): si el problema quedó bien definido como brecha, la pregunta generativa ya está contenida ahí y agregar la caja era pedir dos veces el mismo trabajo. Si el usuario trae un diagrama de la cuarta iteración o anterior y pregunta por esta caja, esta es la razón por la que no está.
+
 ### Paso 2: Generar posibilidades
 
 Cada posibilidad es **una cascada completa**, o al menos un par Where to Play + How to Win, contada como una historia feliz: un relato de un mundo en el que esa opción funciona muy bien. Se llaman posibilidades y no opciones justamente para que no se lean como opiniones a defender.
