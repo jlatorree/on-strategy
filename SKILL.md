@@ -40,9 +40,10 @@ Una alerta abierta en el índice bloquea la compilación del memo.
 ## Al iniciar una sesión
 
 1. Lee `lecciones.md` en la raíz de la carpeta de trabajo, si existe, y aplica sus reglas.
-2. Busca `index.md`. Si existe, esta es una sesión continuada: léelo, mira qué secciones están decididas, cuáles desactualizadas y qué alertas hay abiertas, resume en cinco líneas dónde quedó el proceso y cuál es el bloque siguiente, confírmalo con el usuario y retoma ahí. El Paso 0 completo no se repite.
-3. Revisa `inbox/`. Si hay algo, procésalo antes de seguir con el bloque, según el protocolo de `references/entregable.md`. Lo que trae el usuario cambia el punto de partida.
-4. Si no existe `index.md`, arranca en el Paso 0.
+2. Busca `index.md`. Si existe, léelo: qué secciones están decididas, cuáles desactualizadas, qué alertas hay abiertas. Resume en cinco líneas dónde quedó el proceso y cuál es el paso siguiente, confírmalo con el usuario y retoma ahí.
+3. **Mira si `bitacora-de-decisiones.md` ya tiene la ruta acordada.** Ese es el corte, no la existencia del índice: con ruta acordada, el Paso 0 no se repite; con el esqueleto creado pero sin ruta, retoma el Paso 0 donde quedó.
+4. Revisa `inbox/`. Si hay algo, procésalo antes de seguir, según el protocolo de `references/entregable.md`, sección 7. Lo que trae el usuario cambia el punto de partida.
+5. Si no existe `index.md`, arranca en el Paso 0.
 
 ## Paso 0: Diagnóstico y ruta
 
@@ -58,11 +59,15 @@ Entrevista al usuario cubriendo:
 - **Datos disponibles.** Qué tiene a mano (participación, márgenes, estudios de cliente, costos relativos) y qué habría que buscar.
 - **Preferencia de investigación.** Si busca él, si buscas tú con la herramienta de búsqueda, o si prefiere prompts de deep research para correr por su cuenta. Ver `references/investigacion.md`.
 
-Con eso, propone la ruta: qué bloques se trabajan, en qué orden, con qué profundidad. Nombra explícitamente cada pieza que el usuario ya tiene resuelta y confirma que entra como punto de partida en vez de rehacerse. Rehacer trabajo hecho quema confianza y tiempo.
+**Apenas tengas entidad y nivel, crea la carpeta de trabajo completa** (`references/entregable.md`, sección 1), con las diez secciones en `vacio` y el `index.md` ya generado. Esto va antes de proponer la ruta, no después de aprobarla: el índice es lo que le muestra al usuario qué se va a construir, y sirve de andamio para colocar lo que ya trae.
+
+**Lo que el usuario ya tiene resuelto entra a su sección como `borrador` en cuanto lo cuenta**, marcado como aporte suyo y sin decidir. Nómbralo explícitamente y confirma que entra como punto de partida en vez de rehacerse. Rehacer trabajo hecho quema confianza y tiempo. Si llega con una solución ya formada, entra además como una de las posibilidades en `a2-posibilidades-wwhtbt`, para que compita con las otras en vez de ganar por llegar primero.
+
+Con la estructura en pie, propone la ruta: qué bloques se trabajan, en qué orden, con qué profundidad.
 
 Si el usuario pide saltarse la co-construcción de la ruta por tiempo o comodidad, propón una ruta estándar completa y sigue con ella.
 
-El Paso 0 termina cuando el usuario aprueba la ruta. Ahí, y no antes, creas la carpeta de trabajo con su estructura (`references/entregable.md`, sección 1) y la ruta acordada queda como primera entrada de `bitacora-de-decisiones.md`. Antes de la aprobación no hay nada decidido que registrar.
+El Paso 0 termina cuando el usuario aprueba la ruta, y esa ruta queda como primera entrada de `bitacora-de-decisiones.md`.
 
 ## Los bloques de trabajo
 
@@ -89,6 +94,8 @@ Tres reglas de ruta que vienen de las fuentes:
 - **El Winning Aspiration se esboza temprano y se refina tarde.** Sirve como función objetivo para comparar posibilidades, no como una declaración a pulir de entrada.
 
 Cada bloque escribe en la sección que le corresponde: 1 en `00-problema-a-resolver`, 2 en `01-winning-aspiration`, 3 en `a1-strategic-logic-flow`, 4 a 6 en `a2-posibilidades-wwhtbt`, 7 en `02-where-to-play-how-to-win`, 8 en `03-capabilities`, 9 en `04-management-systems`. Las secciones `05-posibilidades-descartadas`, `06-supuestos-vivos` y `07-senales-de-cambio` se llenan al cerrar el bloque 7 y se afinan después.
+
+Antes de abrir un bloque, revisa `inbox/`. Lo que el usuario dejó ahí cambia el punto de partida, y esperar a la sesión siguiente para leerlo hace trabajo que había que rehacer. El protocolo está en `references/entregable.md`, sección 7.
 
 Un bloque se cierra cuando su sección cumple lo que `references/entregable.md`, sección 8, define para ella, contenido y criterios de calidad, y el usuario la decidió. Recorre el framework con el usuario hasta llegar ahí.
 

@@ -41,7 +41,9 @@ La regla de Roger Martin que gobierna el memo final: **si son más de cinco pág
 
 **`evidencia.md` y `bitacora-de-decisiones.md` no son secciones**, son registros transversales que crecen sin parar. La bitácora en particular se agrega al final y nunca se reordena: su valor es ser cronológica.
 
-La carpeta se crea recién cuando el usuario aprueba la ruta en el Paso 0. Antes de eso no hay nada decidido que registrar.
+**La carpeta se crea apenas se sabe la entidad y el nivel**, al principio del Paso 0, con las diez secciones en `estado: vacio` y el índice ya generado. No espera a que la ruta esté aprobada: una sección `vacio` no afirma nada, y tener el mapa desde el primer minuto es lo que le muestra al usuario qué se va a construir y qué falta. Lo que el usuario ya trae resuelto entra a su sección como `borrador` en cuanto lo cuenta.
+
+El estado es lo que separa existir de estar decidido. Un esqueleto completo en `vacio` no es adelantarse: es el andamio contra el que se lee todo lo que el usuario ya tiene.
 
 ---
 
@@ -180,7 +182,9 @@ Por qué una alerta abierta bloquea la compilación: un memo con dos elecciones 
 
 La carpeta donde el usuario deja lo que quiere que entre al proceso: notas de reunión, un estudio de clientes, el resultado de un deep research, un análisis de competidores, feedback sobre algo ya escrito, un informe de directorio.
 
-**Se revisa al inicio de cada sesión y cada vez que el usuario diga que dejó algo.**
+**Se revisa en tres momentos: al inicio de cada sesión, antes de abrir cada bloque, y cada vez que el usuario diga que dejó algo.** El chequeo antes de cada bloque es el que evita que un archivo dejado a mitad de proceso se quede sin leer hasta la sesión siguiente.
+
+Si el entorno no permite una carpeta donde el usuario deje archivos, lo que adjunte a la conversación entra por este mismo protocolo. Lo que define al inbox es el tratamiento (reportar, rutear, confirmar, registrar el origen), no la carpeta.
 
 Protocolo, en orden:
 
