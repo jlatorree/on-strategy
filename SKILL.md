@@ -84,7 +84,7 @@ La ruta se arma con estos bloques. No todos entran siempre: el diagnóstico deci
 | 7 | Elegir Where to Play + How to Win | Cascade + estrategias genéricas | ambas referencias de marco |
 | 8 | Must-Have Capabilities | Sistema de actividades y encaje | ambas referencias de marco |
 | 9 | Enabling Management Systems y medidas | Cascade | `references/playing-to-win.md` |
-| 10 | Prueba de coherencia | Cinco pruebas de Porter | `references/understanding-porter.md` |
+| 10 | Prueba de coherencia | Cinco pruebas de Porter | `references/understanding-porter.md`, sección 6 |
 | 11 | Compilar el memo desde las secciones ya decididas | | `references/entregable.md` |
 
 Tres reglas de ruta que vienen de las fuentes:
@@ -105,7 +105,7 @@ Las referencias tienen las definiciones, los criterios de calidad y los errores 
 
 - **`references/playing-to-win.md`**. Los tres marcos de Martin: Strategy Choice Cascade (las cinco cajas, qué hace buena a cada una, errores típicos), Strategic Logic Flow (las cuatro dimensiones y los siete elementos analíticos) y Strategic Choice Structuring Process con el manejo del What Would Have To Be True.
 - **`references/understanding-porter.md`**. Porter según Magretta: Cinco Fuerzas, ventaja competitiva como precio relativo y costo relativo, cadena de valor, estrategias genéricas, trade-offs, encaje, continuidad, eficacia operativa frente a estrategia, y las cinco pruebas de una buena estrategia.
-- **`references/ejemplos.md`**. Los casos de ambos libros, indexados por lo que ilustran. Búscalo cuando necesites un ejemplo concreto para explicar un concepto o para mostrarle al usuario cómo se ve una elección bien hecha.
+- **`references/ejemplos.md`**. Los casos de ambos libros, indexados por lo que ilustran. Úsalo cuando necesites un ejemplo concreto para explicar un concepto o para mostrar cómo se ve una elección bien hecha. Llega al caso por su índice: busca el concepto en la tabla "Índice rápido por concepto", que devuelve los nombres de los casos, y lee solo el encabezado `###` del que elijas. El archivo entero es largo y un caso son diez líneas.
 - **`references/investigacion.md`**. Cómo enriquecer cada paso con evidencia: qué buscar, cuándo alcanza con una búsqueda y cuándo conviene partir el research, cómo armar prompts de deep research, y cómo citar y marcar cada afirmación.
 - **`references/entregable.md`**. Cómo se organiza el entregable: la estructura de archivos, el frontmatter que lleva el estado de cada sección, el grafo de dependencias, el formato del índice, el protocolo del inbox, los criterios de calidad de cada sección y la compilación final del memo. Léelo antes de crear la carpeta de trabajo y antes de escribir cualquier sección.
 
@@ -125,7 +125,7 @@ Cuando falte un dato para completar un análisis y sea buscable, búscalo sin pr
 Esta revisión es la compuerta que habilita compilar el memo. Córrela y muéstrale al usuario el resultado antes de compilar.
 
 1. **Estado completo.** Ninguna sección del memo está vacía ni desactualizada, y no hay alertas abiertas en el índice.
-2. **Las cinco pruebas de Porter.** Propuesta de valor distintiva, cadena de valor a medida, trade-offs distintos de los rivales, encaje a lo largo de la cadena, continuidad en el tiempo. Detalle en `references/understanding-porter.md`.
+2. **Las cinco pruebas de Porter.** Propuesta de valor distintiva, cadena de valor a medida, trade-offs distintos de los rivales, encaje a lo largo de la cadena, continuidad en el tiempo. Detalle en `references/understanding-porter.md`, sección 6.
 3. **Coherencia de la Cascada.** Cada caja sostiene a la de al lado. El Where to Play y el How to Win se refuerzan. Las capacidades sirven al How to Win elegido y no a uno genérico.
 4. **La prueba can't/won't.** ¿Por qué un rival no puede copiar esto, o no va a querer copiarlo? Si no hay respuesta, todavía no hay ventaja.
 5. **Consistencia interna.** Los números de cada sección coinciden entre sí y con lo que dicen las fuentes citadas en `evidencia.md`.
