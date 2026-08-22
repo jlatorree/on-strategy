@@ -173,3 +173,7 @@ El skill dispara cuando el usuario quiere definir o rehacer una estrategia, cues
 La arquitectura de la carpeta de trabajo (capa de fuentes inmutable, capa generada por el modelo, `index.md` como catálogo y `log.md` cronológico con prefijo parseable) sigue el patrón [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) de Andrej Karpathy.
 
 Este repositorio no incluye los libros fuente ni reproduce su texto: contiene una síntesis y reformulación original con fines de referencia operativa.
+
+## Licencia
+
+[MIT](LICENSE). El código (`scripts/graph.py`) y el proceso del skill son de uso, modificación y redistribución libres. Ver la nota de fuentes arriba: la síntesis de los frameworks es reformulación original, no una copia de los libros.

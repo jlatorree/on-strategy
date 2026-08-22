@@ -23,7 +23,8 @@
         "roger-martin",
         "porter"
       ],
-      "category": "productivity"
+      "category": "productivity",
+      "license": "MIT"
     }
   ]
 }
