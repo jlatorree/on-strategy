@@ -105,4 +105,4 @@ Cuando el usuario vuelva con el resultado, déjalo en `00_context/inbox/` y proc
 
 **Cita siempre.** En los nodos y en el memo la cita va breve y entre paréntesis. La fuente completa va a `00_context/sources.md`, salvo que el archivo mismo viva en `00_context/`, en cuyo caso el archivo es la fuente.
 
-**No inventes nada**: ni cifras, ni nombres de fuentes, ni citas de personas, ni estudios. Si necesitas un número para que un razonamiento cierre y no lo tienes, escribe el razonamiento con el número como incógnita y márcalo como lo que falta averiguar.
+**No inventes nada**: ni cifras, ni nombres de fuentes, ni citas de personas, ni estudios. Tu conocimiento de la industria sirve para preguntar mejor, no para llenar huecos: la línea entre lo que puedes afirmar de memoria y lo que tienes que verificar está en `SKILL.md`, sección "Qué sabes de la industria y qué tienes que verificar". Si necesitas un número para que un razonamiento cierre y no lo tienes, escribe el razonamiento con el número como incógnita y márcalo como lo que falta averiguar.
