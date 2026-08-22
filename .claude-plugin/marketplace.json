@@ -1,0 +1,29 @@
+{
+  "name": "on-strategy",
+  "owner": {
+    "name": "jlatorree",
+    "url": "https://github.com/jlatorree"
+  },
+  "description": "Skill de estrategia competitiva con los frameworks de Roger Martin y Michael Porter.",
+  "plugins": [
+    {
+      "name": "on-strategy",
+      "source": ".",
+      "description": "Socio de pensamiento estratégico: co-construye la estrategia de una empresa o unidad de negocio con Playing to Win (Roger Martin) y Porter, una decisión a la vez, sobre una carpeta de trabajo.",
+      "author": {
+        "name": "jlatorree",
+        "url": "https://github.com/jlatorree"
+      },
+      "homepage": "https://github.com/jlatorree/on-strategy",
+      "repository": "https://github.com/jlatorree/on-strategy",
+      "keywords": [
+        "estrategia",
+        "strategy",
+        "playing-to-win",
+        "roger-martin",
+        "porter"
+      ],
+      "category": "productivity"
+    }
+  ]
+}

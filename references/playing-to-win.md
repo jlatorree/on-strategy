@@ -82,7 +82,7 @@ Cinco preguntas encadenadas. Las de arriba dan contexto a las de abajo; las de a
 
 **Qué se decide:** cómo se gana en ese campo. La receta para crear valor único y entregarlo de forma distinta a los rivales.
 
-Hay dos formas genéricas, y solo dos: **liderazgo en costos** y **diferenciación**. Detalle en `understanding-porter.md`.
+Hay dos formas genéricas, y solo dos: **liderazgo en costos** y **diferenciación**. Detalle en `porter-pruebas.md`, sección 2.
 
 **Qué lo hace bueno:**
 - Está **atado a su Where to Play**. No es cómo ganar en general: es cómo ganar en *ese* campo. Olive Garden y Mario Batali venden comida italiana y ganan de formas incompatibles entre sí, cada una correcta para su campo.
@@ -134,7 +134,7 @@ En el libro se llama *strategy logic flow*. Es el marco analítico que alimenta 
 
 **Elemento 1: Segmentación.** ¿Cuáles son los segmentos distintos de esta industria (geografía, tipo de producto, canal, necesidad del cliente)? ¿Qué esquema de segmentación tiene sentido hoy, y cuál podría tenerlo mañana? Los mapas de industria heredados casi siempre están incompletos. Crest dominó treinta años el segmento "prevención de caries" hasta que Colgate inventó el segmento "boca sana" y le quitó el liderazgo en un año. La caries se había vuelto un beneficio genérico y el mapa viejo ya no servía.
 
-**Elemento 2: Atractivo estructural.** ¿Qué tan atractivo es cada segmento? Acá se usan las **Cinco Fuerzas de Porter**. Detalle completo en `understanding-porter.md`.
+**Elemento 2: Atractivo estructural.** ¿Qué tan atractivo es cada segmento? Acá se usan las **Cinco Fuerzas de Porter**. Detalle completo en `porter-analisis.md`, sección 2.
 
 Lo que se busca: segmentos con proveedores sin poder para subir costos, con rivales que atienden partes distintas del mercado en vez de pelear por el mismo cliente de la misma forma, con baja intensidad de capital cuando el capital obliga a producir a plena capacidad y por lo tanto a bajar precios.
 

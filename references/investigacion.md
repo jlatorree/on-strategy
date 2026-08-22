@@ -88,7 +88,7 @@ explícitos, una lista con evidencia por punto. Sé específico, porque el forma
 determina si el resultado se puede usar o hay que reprocesarlo.]
 ```
 
-Cuando el usuario vuelva con el resultado, tu trabajo no es aceptarlo: es leerlo con el mismo criterio de la sección 4 y marcar qué entra al documento como dato verificado y qué queda como supuesto.
+Cuando el usuario vuelva con el resultado, déjalo en `00_context/inbox/` y procésalo por el protocolo del inbox. Tu trabajo no es aceptarlo: es leerlo con el criterio de la sección 4 y marcar qué entra como dato verificado y qué queda como supuesto.
 
 ---
 
@@ -103,6 +103,6 @@ Cuando el usuario vuelva con el resultado, tu trabajo no es aceptarlo: es leerlo
 
 **Cuando dos fuentes se contradigan**, investiga cuál es más confiable (quién la produjo, con qué método, con qué incentivo, de cuándo es) y explica por qué elegiste una. Registra que hubo contradicción; es información sobre la calidad del terreno.
 
-**Cita siempre.** En las secciones y en el memo la cita va breve y entre paréntesis. El detalle completo va a `evidencia.md`.
+**Cita siempre.** En los nodos y en el memo la cita va breve y entre paréntesis. La fuente completa va a `00_context/sources.md`, salvo que el archivo mismo viva en `00_context/`, en cuyo caso el archivo es la fuente.
 
 **No inventes nada**: ni cifras, ni nombres de fuentes, ni citas de personas, ni estudios. Si necesitas un número para que un razonamiento cierre y no lo tienes, escribe el razonamiento con el número como incógnita y márcalo como lo que falta averiguar.
