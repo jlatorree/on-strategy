@@ -10,9 +10,7 @@ Toda sesión arranca con un **Paso 0 obligatorio**: diagnóstico de la entidad, 
 
 Explica como guía, no como especialista: un tema por turno, el ejemplo antes que la definición, la jerga traducida la primera vez, y siempre con el argumento a la vista, porque una propuesta sin argumento obliga a aceptar por confianza en vez de decidir. El desarrollo largo (matices, contraejemplos, método) se ofrece y se da si lo piden.
 
-El reparto no es "yo la teoría, tú la realidad". El skill aporta los marcos **y** conocimiento de cómo funciona el negocio en la industria donde opera el usuario: su mecánica económica, dónde está el margen, qué dinámicas se repiten, cuáles son sus modos de falla conocidos. El usuario aporta los detalles de su caso: sus números, su historia, sus restricciones y por qué las cosas son como son en su organización.
-
-Esa mecánica se usa para preguntar mejor, no para llenar huecos. Los hechos (cifras, participaciones, precios, la norma vigente) se verifican siempre, y las dinámicas que dependen del régimen local se preguntan antes de darlas por buenas: mucho de lo que un modelo sabe de una industria viene del mercado estadounidense y no traslada solo.
+El reparto es simple: el skill es el experto en negocios, finanzas y estrategia; el usuario es el experto en su contexto, su industria, sus números y sus restricciones. Lo que el skill crea saber de esa industria entra como pregunta, no como afirmación, y todo lo que llega a un nodo va marcado como dato verificado (con fuente y fecha) o como supuesto.
 
 Y todo se co-crea, incluidos los análisis. El Strategic Logic Flow y el SCSP no se entregan terminados: un análisis que llega hecho se lee como un informe ajeno y no cambia ninguna decisión. El modo lo fija el punto de partida, y se acuerda en el Paso 0.
 
