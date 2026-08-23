@@ -117,6 +117,7 @@ on-strategy/
     ├── porter-analisis.md      Cinco Fuerzas, ventaja competitiva, cadena de valor
     ├── porter-pruebas.md       las cinco pruebas, genéricas, errores típicos
     ├── nodos.md                qué va en cada nodo y sus criterios de calidad
+    ├── niveles.md              estrategia indivisible y de agregación
     ├── memo.md                 la compuerta y la compilación del memo
     ├── investigacion.md        protocolo de evidencia y deep research
     └── ejemplos.md             casos de ambos libros, indexados por concepto
@@ -174,7 +175,7 @@ El skill dispara cuando el usuario quiere definir o rehacer una estrategia, cues
 
 - A.G. Lafley y Roger L. Martin, *Playing to Win: How Strategy Really Works* (Harvard Business Review Press, 2013).
 - Joan Magretta, *Understanding Michael Porter: The Essential Guide to Competition and Strategy* (Harvard Business Review Press, 2012).
-- La serie de ensayos [Playing to Win / Practitioner Insights](https://rogermartin.medium.com/) de Roger Martin, para la evolución del SCSP y las guías de comunicación de estrategia posteriores al libro.
+- La serie de ensayos [Playing to Win / Practitioner Insights](https://rogerlmartin.substack.com/) de Roger Martin, para la evolución del SCSP y las guías posteriores al libro. En particular, [Corporate vs. Business Unit Strategy: The Art of Aggregation](https://rogerlmartin.substack.com/p/2022-03-07_corporate-vs-business-unit-strategy-adb1163665dahtml) (2022), base de `references/niveles.md`.
 
 La arquitectura de la carpeta de trabajo (capa de fuentes inmutable, capa generada por el modelo, `index.md` como catálogo y `log.md` cronológico con prefijo parseable) sigue el patrón [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) de Andrej Karpathy.
 

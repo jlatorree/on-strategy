@@ -20,6 +20,8 @@ Qué significa ganar, con quién y contra quién, traducido a medidas concretas.
 
 ## `02-where-to-play-how-to-win`
 
+**Si la entidad es un nivel de agregación, estas dos cajas preguntan otra cosa**: el Where to Play es qué portafolio de negocios se mantiene y con qué peso de inversión, y el How to Win es por qué medios se agrega valor competitivo a ese portafolio. Ver `niveles.md`, sección 3. Lo que sigue aplica al nivel indivisible.
+
 Dos partes en un archivo, porque son un par inseparable. Separarlas es donde el riesgo de incoherencia es más alto; co-locarlas hace que el emparejamiento sea estructural y no una regla que haya que recordar. En el memo salen igual como dos secciones distintas.
 
 **Where to Play:** dónde se compite, recorriendo las dimensiones que apliquen (geografía, tipo de producto o servicio, segmento de consumidor, canal, etapa vertical), y con el mismo peso una lista explícita de dónde no se juega.

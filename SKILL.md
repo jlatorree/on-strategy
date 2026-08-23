@@ -237,7 +237,7 @@ Este paso es fijo. Ninguna sesión nueva salta al contenido sin él, porque la r
 
 Entrevista al usuario cubriendo:
 
-- **Entidad y nivel.** ¿Empresa completa, unidad de negocio, marca, función? La estrategia es singular por entidad. Si hay varios niveles, acuerden cuál se trabaja ahora y qué elecciones del nivel superior entran como restricción dada.
+- **Entidad y nivel.** ¿Empresa completa, unidad de negocio, marca, función? La estrategia es singular por entidad, y "entidad" no es lo mismo que casilla del organigrama. Antes de acordar la ruta, determina si lo que van a trabajar es un **negocio indivisible** (donde se compite de verdad) o un **nivel de agregación** (que tiene varios negocios abajo), porque de eso depende qué significan las cajas de la Cascada. La prueba y el método están en `references/niveles.md`. Si hay varios niveles, acuerden cuál se trabaja ahora y qué elecciones del nivel superior entran como restricción dada.
 - **Situación.** Qué está pasando, qué duele, qué gatilló esta conversación.
 - **Lo ya resuelto.** Qué partes ya están decididas y con qué firmeza. Pide lo que exista por escrito.
 - **Quién decide** y a quién más hay que convencer.
@@ -295,6 +295,7 @@ El cuerpo de este archivo tiene el proceso; las referencias tienen las definicio
 - **`references/porter-analisis.md`**. Las herramientas: Cinco Fuerzas (§2), ventaja competitiva como precio y costo relativo (§3), cadena de valor y encaje (§4), eficacia operativa frente a estrategia (§5).
 - **`references/porter-pruebas.md`**. El control de calidad: las cinco pruebas (§1), estrategias genéricas (§2), crecer sin romper la estrategia (§3), errores típicos (§4).
 - **`references/nodos.md`**. Qué va en cada nodo y sus criterios de calidad. Un bloque por nodo.
+- **`references/niveles.md`**. Estrategia indivisible y estrategia de agregación: cómo saber en qué nivel se está compitiendo, cómo cambian el Where to Play y el How to Win cuando la entidad agrega negocios, la prueba de valor neto y las reinforcing rods. Ábrelo cuando la entidad tenga negocios distintos adentro o cuelgue de un nivel superior.
 - **`references/memo.md`**. La compuerta y la compilación del memo. Solo al final.
 - **`references/investigacion.md`**. Cómo enriquecer cada paso con evidencia, cómo armar prompts de deep research, y cómo se marca y se cita cada afirmación.
 - **`references/ejemplos.md`**. Los casos de ambos libros. Llega al caso por su índice: busca el concepto en la tabla "Índice rápido por concepto", que devuelve nombres de casos, y lee solo el encabezado `###` del que elijas. El archivo entero es largo y un caso son diez líneas.
